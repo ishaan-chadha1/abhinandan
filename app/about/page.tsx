@@ -5,15 +5,8 @@ import PageHero from "../components/PageHero";
 import SectionHeading from "../components/SectionHeading";
 import Reveal from "../components/Reveal";
 import Icon from "../components/Icon";
-import {
-  leaders,
-  pillars,
-  principles,
-  journeyMilestones,
-  capacityGrowth,
-  trustedBrands,
-  journeyStats,
-} from "@/lib/content";
+import OurJourney from "../components/OurJourney";
+import { leaders, pillars, principles } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "About Us",
@@ -118,116 +111,7 @@ export default function AboutPage() {
       </section>
 
       {/* Journey */}
-      <section className="section" style={{ background: "var(--sky-2)" }}>
-        <div className="container-x">
-          <SectionHeading
-            eyebrow="Our Journey · Building Trust in Packaging Since 1995"
-            title="A Journey Built on Vision, Partnership & Scale"
-            intro="What began in 1995 as a focused packaging enterprise has evolved into a diversified industrial group serving leading businesses across India — founded on reliability, quality and a long-term vision for growth."
-          />
-
-          {/* Timeline */}
-          <div className="relative mt-16">
-            <div
-              className="absolute inset-x-0 top-6 hidden h-[2px] lg:block"
-              style={{ background: "linear-gradient(to right, transparent, var(--line) 15%, var(--line) 85%, transparent)" }}
-            />
-            <div className="grid gap-8 lg:grid-cols-3">
-              {journeyMilestones.map((m, i) => (
-                <Reveal key={m.year} delay={i * 120} className="relative flex flex-col">
-                  <div className="mb-6 flex items-center gap-3">
-                    <span
-                      className="grid h-12 place-items-center rounded-full px-4 text-white"
-                      style={{ background: "var(--blue)", fontFamily: "var(--font-heading)", fontWeight: 800, boxShadow: "0 8px 18px -8px rgba(18,78,158,0.7)" }}
-                    >
-                      {m.year}
-                    </span>
-                    <span className="eyebrow">{m.tag}</span>
-                  </div>
-                  <div
-                    className="flex-1 rounded-2xl bg-white p-7"
-                    style={{ border: "1px solid var(--line)", boxShadow: "0 20px 45px -30px rgba(10,42,94,0.3)" }}
-                  >
-                    <p className="text-muted leading-relaxed">{m.body}</p>
-
-                    {m.board && (
-                      <div className="mt-5 border-t pt-4" style={{ borderColor: "var(--line)" }}>
-                        <p className="text-sm font-semibold text-navy" style={{ fontFamily: "var(--font-heading)" }}>
-                          Board of Directors
-                        </p>
-                        <ul className="mt-2 space-y-1.5 text-sm text-muted">
-                          {m.board.map((b) => (
-                            <li key={b} className="flex gap-2">
-                              <span className="mt-[2px] text-blue">•</span>
-                              <span>{b}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    )}
-
-                    {m.year === "2025" && (
-                      <div className="mt-5 border-t pt-4" style={{ borderColor: "var(--line)" }}>
-                        <div className="flex items-end gap-2" style={{ height: 84 }}>
-                          {capacityGrowth.map((c) => (
-                            <div key={c.year} className="flex flex-1 flex-col justify-end">
-                              <div
-                                className="w-full rounded-t"
-                                style={{ height: `${(c.mt / 7000) * 100}%`, minHeight: 6, background: "linear-gradient(to top, var(--blue), var(--blue-bright))" }}
-                              />
-                            </div>
-                          ))}
-                        </div>
-                        <div className="mt-3 space-y-1 text-sm">
-                          {capacityGrowth.map((c) => (
-                            <div key={c.year} className="flex justify-between text-muted">
-                              <span>{c.year}</span>
-                              <span className="font-semibold text-navy">{c.mt.toLocaleString("en-IN")} MT</span>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                    )}
-                  </div>
-                </Reveal>
-              ))}
-            </div>
-          </div>
-
-          {/* Trusted by industry leaders */}
-          <Reveal className="mt-16 text-center">
-            <p className="eyebrow">Trusted by Industry Leaders</p>
-            <div className="mt-5 flex flex-wrap items-center justify-center gap-x-10 gap-y-3">
-              {trustedBrands.map((b) => (
-                <span key={b} className="text-lg font-bold text-navy md:text-xl" style={{ fontFamily: "var(--font-heading)" }}>
-                  {b}
-                </span>
-              ))}
-            </div>
-            <p className="mt-4 text-sm text-muted">Serving leading sugar refineries across India</p>
-          </Reveal>
-
-          {/* Journey stats */}
-          <div className="mx-auto mt-12 grid max-w-4xl gap-5 sm:grid-cols-3">
-            {journeyStats.map((s, i) => (
-              <Reveal
-                key={s.label}
-                delay={i * 90}
-                className="flex items-center gap-4 rounded-2xl bg-white p-6"
-                style={{ border: "1px solid var(--line)" }}
-              >
-                <span className="grid h-12 w-12 shrink-0 place-items-center rounded-xl text-white" style={{ background: "linear-gradient(145deg, var(--blue-bright), var(--navy))" }}>
-                  <Icon name={i === 0 ? "award" : i === 1 ? "factory" : "handshake"} size={24} />
-                </span>
-                <div>
-                  <p className="text-2xl text-navy" style={{ fontFamily: "var(--font-heading)", fontWeight: 800 }}>{s.value}</p>
-                  <p className="text-xs uppercase tracking-wider text-muted">{s.label}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
+      <OurJourney />
 
       {/* Management */}
       <section className="section">
@@ -238,8 +122,11 @@ export default function AboutPage() {
           />
           <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {leaders.map((l, i) => (
-              <Reveal key={l.name} delay={i * 110} className="group text-center">
-                <div className="relative mx-auto aspect-[3/4] w-full overflow-hidden rounded-3xl" style={{ background: "var(--navy)" }}>
+              <Reveal key={l.name} delay={i * 110} className="group">
+                <div
+                  className="relative mx-auto aspect-[3/4] w-full overflow-hidden rounded-3xl"
+                  style={{ background: "linear-gradient(160deg, var(--navy) 10%, var(--blue) 100%)" }}
+                >
                   <Image
                     src={l.image}
                     alt={l.name}
@@ -247,7 +134,10 @@ export default function AboutPage() {
                     sizes="(max-width: 768px) 100vw, 360px"
                     className="object-cover object-top"
                   />
-                  <div className="absolute inset-x-0 bottom-0 p-5" style={{ background: "linear-gradient(to top, rgba(10,42,94,0.92), transparent)" }}>
+                  <div
+                    className="absolute inset-x-0 bottom-0 p-5"
+                    style={{ background: "linear-gradient(to top, rgba(10,42,94,0.92), transparent)" }}
+                  >
                     <h3 className="text-xl" style={{ color: "#fff" }}>{l.name}</h3>
                     <p className="text-sm font-medium" style={{ color: "#bcd4ff" }}>{l.role}</p>
                   </div>

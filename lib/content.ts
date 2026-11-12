@@ -161,7 +161,7 @@ export type Product = { name: string; image: string; fill?: boolean };
 export const products: Product[] = [
   { name: "PP Woven Pinch Bottom Bags", image: "/images/products/pp-woven-pinch-bottom-bags-cutout.png" },
   { name: "BOPP Laminated Sacks", image: "/images/products/bopp-laminated-sacks-cutout.png" },
-  { name: "HDPE / PP Woven Sacks", image: "/images/products/hdpe-pp-woven-sacks-cutout.png" },
+  { name: "HDPE / PP Woven Sacks", image: "/images/products/hdpe-pp-woven-sacks.jpg", fill: true },
   { name: "Woven Shopping Bags", image: "/images/products/woven-shopping-bags-cutout.png" },
   { name: "Secondary Aluminium Wire Rod", image: "/images/products/secondary-aluminium-wire-rod.jpg", fill: true },
   { name: "HDPE Geomembrane Pondliner", image: "/images/products/hdpe-geomembrane-pondliner.jpg", fill: true },
@@ -171,9 +171,9 @@ export const products: Product[] = [
 export type Leader = { name: string; role: string; image: string };
 
 export const leaders: Leader[] = [
-  { name: "Kamal Sipani", role: "Chairman", image: "/images/leadership/kamal-sipani.jpg" },
-  { name: "Yeshwant Bothra", role: "Managing Director", image: "/images/leadership/yeshwant-bothra.jpg" },
-  { name: "Abhishek Sipani", role: "Director", image: "/images/leadership/abhishek-sipani.jpg" },
+  { name: "Kamal Sipani", role: "Chairman", image: "/images/leadership/kamal-sipani-cutout.png" },
+  { name: "Yeshwant Bothra", role: "Managing Director", image: "/images/leadership/yeshwant-bothra-cutout.png" },
+  { name: "Abhishek Sipani", role: "Director", image: "/images/leadership/abhishek-sipani-cutout.png" },
 ];
 
 export type Machine = {

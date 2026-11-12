@@ -190,3 +190,132 @@
 .hover-zoom:hover img {
   transform: scale(1.06);
 }
+
+/* ======================================================================
+   OUR JOURNEY infographic (ported artboard — scoped, no page-level reset)
+   ====================================================================== */
+.oj-section {
+  padding: 0;
+}
+.responsive-shell {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.artboard {
+  width: 1024px;
+  height: 700px;
+  position: relative;
+  transform-origin: top left;
+  background: radial-gradient(ellipse 68% 58% at 50% 42%, #f5f3f0 0%, #eae7e3 58%, #dfdcd7 100%);
+  overflow: hidden;
+  user-select: none;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+.artboard * { box-sizing: border-box; }
+.paper-grain {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  pointer-events: none; opacity: 0.36; mix-blend-mode: multiply; z-index: 40;
+}
+.header-block { position: absolute; top: 22px; left: 0; width: 100%; text-align: center; z-index: 15; }
+.main-title {
+  font-family: "Playfair Display", Georgia, serif; font-weight: 800; font-size: 38.5px;
+  line-height: 1.08; letter-spacing: 0.025em; color: #1a2a44; text-transform: uppercase;
+}
+.sub-title {
+  font-family: "Lora", Georgia, serif; font-weight: 400; font-size: 19px; line-height: 1.3;
+  color: #2b3442; margin-top: 4px; letter-spacing: 0.005em;
+}
+.top-timeline-svg { position: absolute; inset: 0; width: 1024px; height: 670px; pointer-events: none; z-index: 14; }
+.pin-year-label {
+  position: absolute; font-family: "Plus Jakarta Sans", sans-serif; font-weight: 600; font-size: 19px;
+  line-height: 1; letter-spacing: -0.01em; z-index: 16;
+}
+.pin-year-1995 { left: 214px; top: 95px; color: #9d6b3b; }
+.pin-year-1997 { left: 467px; top: 95px; color: #1e335c; }
+.pin-year-2025 { left: 729px; top: 95px; color: #9d6b3b; }
+.road-layer-svg { position: absolute; inset: 0; width: 1024px; height: 670px; pointer-events: none; z-index: 5; }
+.milestone-card {
+  position: absolute; background: linear-gradient(180deg, #fbfaf9 0%, #f5f4f2 100%);
+  border-radius: 9px; border: 1px solid #e2dfdc;
+  box-shadow: 0 12px 26px rgba(24,29,38,0.13), 0 3px 8px rgba(24,29,38,0.07), inset 0 1px 0 rgba(255,255,255,0.9);
+  z-index: 12; padding: 10px 15px 13px 11px;
+}
+.card-1995 { left: 79px; top: 138px; width: 255px; min-height: 176px; }
+.card-1997 { left: 356px; top: 138px; width: 258px; min-height: 250px; }
+.card-2025 { left: 628px; top: 138px; width: 344px; min-height: 219px; }
+.card-ribbon {
+  height: 24px; display: inline-flex; align-items: center; padding: 0 22px 0 11px;
+  font-size: 11.4px; font-weight: 600; letter-spacing: 0.025em; color: #fff;
+  clip-path: polygon(0 0, 100% 0, calc(100% - 10px) 50%, 100% 100%, 0 100%);
+  border-top-left-radius: 2px; border-bottom-left-radius: 2px;
+}
+.ribbon-1995 { width: 229px; background: linear-gradient(90deg, #b86f2a 0%, #db8b3c 100%); }
+.ribbon-1997 { width: 220px; background: linear-gradient(90deg, #1b2d50 0%, #314e82 100%); }
+.ribbon-2025 { width: 264px; background: linear-gradient(90deg, #b97f36 0%, #dfb06a 55%, #f3dec0 100%); }
+.ribbon-2025 .yr { color: #fff; font-weight: 700; }
+.ribbon-2025 .lbl { color: #2c241b; font-weight: 600; margin-left: 4px; }
+.card1-top { display: flex; align-items: flex-start; gap: 11px; margin-top: 11px; padding-left: 4px; }
+.card1-top-text { font-size: 11.4px; line-height: 1.46; color: #292f39; }
+.card1-top-text strong { font-weight: 700; color: #1f252e; }
+.card1-bottom-text { margin-top: 9px; padding-left: 4px; font-size: 11.4px; line-height: 1.46; color: #292f39; }
+.card2-top { display: flex; align-items: flex-start; gap: 10px; margin-top: 11px; padding-left: 3px; }
+.card2-top-text { font-size: 11.1px; line-height: 1.43; color: #292f39; }
+.card2-top-text strong { font-weight: 700; color: #1f252e; }
+.card2-divider { height: 1px; background: #e1dfdc; margin: 9px 2px 8px 4px; }
+.board-section { padding-left: 4px; }
+.board-title { font-size: 12px; font-weight: 700; color: #1e2634; margin-bottom: 4px; }
+.board-list { list-style: none; }
+.board-list li { position: relative; padding-left: 10px; font-size: 10.3px; line-height: 1.56; color: #2b313c; white-space: nowrap; }
+.board-list li::before { content: "•"; position: absolute; left: 0; top: 0; color: #263c66; font-weight: 700; }
+.board-list li strong { font-weight: 700; color: #1e2530; }
+.card3-intro { margin-top: 11px; padding-left: 6px; font-size: 11.8px; line-height: 1.44; color: #292f39; }
+.card3-intro strong { font-weight: 700; color: #1e2530; }
+.card3-split { display: flex; align-items: flex-end; justify-content: space-between; margin-top: 6px; padding-left: 6px; padding-right: 2px; }
+.growth-list { position: relative; list-style: none; padding-left: 14px; padding-bottom: 2px; }
+.growth-list::before { content: ""; position: absolute; left: 2.5px; top: 8px; bottom: 10px; width: 1px; background: #d7bc9a; }
+.growth-list li { position: relative; font-size: 11.2px; line-height: 1.72; color: #323842; white-space: nowrap; }
+.growth-list li::before { content: ""; position: absolute; left: -14px; top: 50%; transform: translateY(-50%); width: 5.5px; height: 5.5px; border-radius: 50%; background: #d6893b; box-shadow: 0 0 0 1.5px #f8f6f3; }
+.growth-list li .dot-sep { color: #b88a54; margin: 0 2px; font-weight: 700; }
+.growth-list li strong { font-weight: 700; color: #212732; }
+.growth-list li.highlight-2025 { margin-top: 1px; line-height: 1.45; }
+.growth-list li.highlight-2025 strong { font-size: 15.5px; font-weight: 800; color: #1b222e; letter-spacing: -0.01em; }
+.road-markers-svg { position: absolute; inset: 0; width: 1024px; height: 670px; pointer-events: none; z-index: 11; }
+.year-pill {
+  position: absolute; transform: translate(-50%, -50%);
+  background: linear-gradient(180deg, #fcfcfb 0%, #f1efec 100%); border: 1px solid #e1deda; border-radius: 999px;
+  box-shadow: 0 4px 10px rgba(22,27,35,0.22), 0 1px 2px rgba(22,27,35,0.14), inset 0 1px 0 #fff;
+  display: flex; align-items: center; justify-content: center; font-family: "Plus Jakarta Sans", sans-serif; font-weight: 700; z-index: 13;
+}
+.pill-1995 { left: 207px; top: 432px; width: 60px; height: 24px; font-size: 15.5px; color: #3a3532; }
+.pill-1997 { left: 466px; top: 452px; width: 68px; height: 27px; font-size: 17.5px; color: #1e335c; }
+.pill-2025 { left: 800px; top: 448px; width: 78px; height: 29px; font-size: 19px; color: #26292e; }
+.leaders-section { position: absolute; top: 492px; left: 0; width: 100%; text-align: center; z-index: 15; }
+.leaders-header { display: flex; align-items: center; justify-content: center; gap: 14px; }
+.leaders-rule { width: 82px; height: 1px; background: #c7c1ba; }
+.leaders-title { font-family: "Playfair Display", Georgia, serif; font-weight: 700; font-size: 14.5px; letter-spacing: 0.055em; color: #222c3c; text-transform: uppercase; }
+.logos-row { margin-top: 10px; display: flex; align-items: center; justify-content: center; gap: 26px; color: #1a2b4c; }
+.tl-logo { height: 30px; width: auto; object-fit: contain; display: block; }
+.logo-dalmia { font-size: 17px; letter-spacing: -0.02em; }
+.logo-dalmia strong { font-weight: 800; font-style: italic; color: #18294a; }
+.logo-dalmia span { font-weight: 400; color: #273347; margin-left: 2px; }
+.logo-ramco { font-size: 17px; font-weight: 800; font-style: italic; letter-spacing: 0.03em; color: #18294a; }
+.logo-acc { font-size: 18px; font-weight: 800; font-style: italic; letter-spacing: 0.02em; color: #18294a; }
+.logo-ultratech { font-size: 17px; font-weight: 800; font-style: italic; letter-spacing: -0.02em; color: #18294a; }
+.logo-cci { font-size: 17.5px; letter-spacing: -0.01em; }
+.logo-cci strong { font-weight: 800; color: #18294a; }
+.logo-cci span { font-weight: 400; font-size: 14.5px; color: #273347; margin-left: 3px; }
+.leaders-subtitle { margin-top: 8px; font-size: 14px; font-weight: 400; color: #2c3542; letter-spacing: 0.005em; }
+.stats-row { position: absolute; top: 600px; left: 71px; width: 874px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 17px; z-index: 15; }
+.stat-card {
+  height: 64px; background: linear-gradient(180deg, #faf9f8 0%, #f3f1ef 100%); border: 1px solid #dfdcd8; border-radius: 7px;
+  box-shadow: 0 6px 15px rgba(24,29,38,0.11), 0 2px 4px rgba(24,29,38,0.06), inset 0 1px 0 rgba(255,255,255,0.9);
+  display: flex; align-items: center; justify-content: center; gap: 13px; padding: 0 14px;
+}
+.stat-text { display: flex; flex-direction: column; justify-content: center; line-height: 1.22; }
+.stat-primary { font-size: 19px; font-weight: 700; color: #1c2d48; letter-spacing: -0.01em; }
+.stat-primary .gold-num { color: #9c6828; font-weight: 700; }
+.stat-primary .years-word { color: #222b3b; font-weight: 500; font-size: 17.5px; }
+.stat-secondary { font-size: 13.2px; font-weight: 400; color: #2f3744; margin-top: 2px; }
