@@ -111,7 +111,7 @@ export const divisions: Division[] = [
   },
   {
     slug: "outdoor-space-studio",
-    name: "Outdoor Space Studio",
+    name: "Outer Space Studio",
     image: "/images/divisions/outdoor-space-studio.jpg",
     summary:
       "Premium outdoor aluminium furniture combining contemporary design, durability and functionality.",
@@ -151,21 +151,57 @@ export const divisions: Division[] = [
       "The operation integrates controlled cultivation, harvesting, low-temperature drying, processing and quality testing to produce nutrient-rich spirulina powder for domestic and international markets.",
       "With a focus on sustainable production, advanced cultivation techniques and stringent quality standards, Alvara Spirulina caters to the growing demand from the nutraceutical, functional food, health supplement and wellness industries.",
     ],
+    link: {
+      label: "Visit Website",
+      href: "https://www.alvaraspirulina.com/",
+    },
   },
 ];
 
 // `fill: true` = a full-scene photo that should cover the tile edge-to-edge.
 // Otherwise the image is a cut-out (transparent) that floats, contained, on the tile.
-export type Product = { name: string; image: string; fill?: boolean };
+export type Product = { name: string; image: string; fill?: boolean; desc?: string };
 
 export const products: Product[] = [
-  { name: "PP Woven Pinch Bottom Bags", image: "/images/products/pp-woven-pinch-bottom-bags-cutout.png" },
-  { name: "BOPP Laminated Sacks", image: "/images/products/bopp-laminated-sacks-cutout.png" },
-  { name: "HDPE / PP Woven Sacks", image: "/images/products/hdpe-pp-woven-sacks.jpg", fill: true },
-  { name: "Woven Shopping Bags", image: "/images/products/woven-shopping-bags-cutout.png" },
-  { name: "Secondary Aluminium Wire Rod", image: "/images/products/secondary-aluminium-wire-rod.jpg", fill: true },
-  { name: "HDPE Geomembrane Pondliner", image: "/images/products/hdpe-geomembrane-pondliner.jpg", fill: true },
-  { name: "HDPE / PP Woven Fabric", image: "/images/products/hdpe-pp-woven-fabric.jpg", fill: true },
+  {
+    name: "PP Woven Pinch Bottom Bags",
+    image: "/images/products/pp-woven-pinch-bottom-bags-cutout.png",
+    desc: "High-performance polypropylene woven bags designed for secure and efficient bulk packaging. Featuring a pinch-bottom closure, these bags offer excellent strength, durability and a professional finish, making them suitable for cement, chemicals and other industrial applications.",
+  },
+  {
+    name: "BOPP Laminated Sacks",
+    image: "/images/products/bopp-laminated-sacks-cutout.png",
+    desc: "Premium BOPP laminated woven sacks combining superior strength with high-quality printability. Designed to offer enhanced product presentation and protection, these bags are widely used across food, agriculture, FMCG and industrial packaging applications.",
+  },
+  {
+    name: "HDPE / PP Woven Sacks",
+    image: "/images/products/hdpe-pp-woven-sacks-framed-v5.jpg",
+    fill: true,
+    desc: "Durable and versatile woven sacks manufactured using high-density polyethylene (HDPE) and polypropylene (PP). Engineered for strength and dependable performance, they are suitable for packaging cement, fertilisers, agricultural commodities and a wide range of industrial materials.",
+  },
+  {
+    name: "Woven Shopping Bags",
+    image: "/images/products/woven-shopping-bags-cutout.png",
+    desc: "Strong, lightweight and reusable woven shopping bags designed for everyday commercial and retail applications. Offering durability and customisable printing options, these bags provide a practical packaging solution for businesses across sectors.",
+  },
+  {
+    name: "Secondary Aluminium Wire Rod",
+    image: "/images/divisions/aluminium.jpg",
+    fill: true,
+    desc: "Secondary aluminium wire rods manufactured to meet diverse industrial requirements. Produced through controlled manufacturing processes, these rods offer consistent quality and are suitable for a range of electrical and industrial applications, subject to grade specifications.",
+  },
+  {
+    name: "HDPE Geomembrane Pondliner",
+    image: "/images/products/hdpe-geomembrane-pondliner.jpg",
+    fill: true,
+    desc: "High-density polyethylene (HDPE) geomembrane liners engineered for water containment and environmental protection applications. Designed for durability and resistance to moisture and environmental conditions, they are suitable for agricultural ponds, water reservoirs and industrial lining requirements.",
+  },
+  {
+    name: "HDPE / PP Woven Fabric",
+    image: "/images/products/hdpe-pp-woven-fabric.jpg",
+    fill: true,
+    desc: "High-quality HDPE and PP woven fabrics manufactured for strength, flexibility and durability. Available in customisable specifications, these fabrics are suitable for industrial packaging, sack manufacturing and a variety of protective and agricultural applications.",
+  },
 ];
 
 export type Leader = { name: string; role: string; image: string };
@@ -229,14 +265,14 @@ export const machinery: Machine[] = [
   },
 ];
 
-export type Value = { icon: IconKey; title: string };
+export type Value = { icon: IconKey; title: string; body?: string };
 
 // "Empowering Growth For The Future" — four pillars.
 export const pillars: Value[] = [
-  { icon: "compass", title: "Visionary Leadership" },
-  { icon: "factory", title: "Diversified Manufacturing Expertise" },
-  { icon: "shield", title: "Commitment to Quality & Integrity" },
-  { icon: "spark", title: "Innovation-driven Approach" },
+  { icon: "compass", title: "Experienced Leadership", body: "Guided by decades of industry knowledge and strategic direction." },
+  { icon: "factory", title: "Integrated Manufacturing Capabilities", body: "Strengthening efficiency and consistency through infrastructure and technology." },
+  { icon: "shield", title: "Commitment to Quality", body: "Maintaining high standards across products, processes and operations." },
+  { icon: "spark", title: "Diversification & Growth", body: "Expanding into new sectors while building on established industry expertise." },
 ];
 
 export type Principle = { no: string; title: string; body: string };

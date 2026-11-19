@@ -139,8 +139,8 @@
     font-family: var(--font-heading);
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.22em;
-    font-size: 0.78rem;
+    letter-spacing: 0.16em;
+    font-size: 1.3rem;
     color: var(--blue-bright);
   }
 }
@@ -296,8 +296,10 @@
 .leaders-header { display: flex; align-items: center; justify-content: center; gap: 14px; }
 .leaders-rule { width: 82px; height: 1px; background: #c7c1ba; }
 .leaders-title { font-family: "Playfair Display", Georgia, serif; font-weight: 700; font-size: 14.5px; letter-spacing: 0.055em; color: #222c3c; text-transform: uppercase; }
-.logos-row { margin-top: 10px; display: flex; align-items: center; justify-content: center; gap: 26px; color: #1a2b4c; }
+.logos-row { margin-top: 12px; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 10px 30px; color: #1a2b4c; }
 .tl-logo { height: 30px; width: auto; object-fit: contain; display: block; }
+.tl-logo-sm { height: 34px; }
+.tl-logo-lg { height: 40px; }
 .logo-dalmia { font-size: 17px; letter-spacing: -0.02em; }
 .logo-dalmia strong { font-weight: 800; font-style: italic; color: #18294a; }
 .logo-dalmia span { font-weight: 400; color: #273347; margin-left: 2px; }

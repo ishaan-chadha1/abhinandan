@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Logo from "./Logo";
 import { nav, contact, site } from "@/lib/site";
-import { divisions } from "@/lib/content";
 import CopyrightYear from "./CopyrightYear";
 
 export default function Footer() {
@@ -9,24 +8,15 @@ export default function Footer() {
     <footer style={{ background: "var(--navy)", color: "rgba(255,255,255,0.72)" }}>
       <div className="container-x grid gap-10 py-16 md:grid-cols-12">
         {/* Brand */}
-        <div className="md:col-span-4">
+        <div className="md:col-span-5">
           <Logo variant="light" />
           <p className="mt-5 max-w-sm text-sm leading-relaxed text-white/60">
             {site.description}
           </p>
-          <a
-            href={contact.alvaraWebsite}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-sky hover:text-white"
-            style={{ fontFamily: "var(--font-heading)" }}
-          >
-            Visit Alvara Spirulina &rarr;
-          </a>
         </div>
 
         {/* Quick links */}
-        <div className="md:col-span-2">
+        <div className="md:col-span-3">
           <h4 className="text-sm font-semibold uppercase tracking-wider text-white">
             Explore
           </h4>
@@ -41,27 +31,8 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Divisions */}
-        <div className="md:col-span-3">
-          <h4 className="text-sm font-semibold uppercase tracking-wider text-white">
-            Divisions
-          </h4>
-          <ul className="mt-4 space-y-2.5 text-sm">
-            {divisions.map((d) => (
-              <li key={d.slug}>
-                <Link
-                  href={`/divisions#${d.slug}`}
-                  className="text-white/60 hover:text-white"
-                >
-                  {d.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-
         {/* Contact */}
-        <div className="md:col-span-3">
+        <div className="md:col-span-4">
           <h4 className="text-sm font-semibold uppercase tracking-wider text-white">
             Get in Touch
           </h4>

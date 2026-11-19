@@ -14,12 +14,7 @@ export const metadata: Metadata = {
 export default function InfrastructurePage() {
   return (
     <>
-      <PageHero
-        eyebrow="Infrastructure & Machinery"
-        title="Advanced Infrastructure & Manufacturing Capabilities"
-        intro="A five-acre facility with over 1,20,000 sq. ft. of built-up infrastructure, equipped with modern machinery and integrated production systems."
-        image="/images/machinery/circular-lohia-nova-looms.jpg"
-      />
+      <PageHero title="Infrastructure & Machinery" image="/images/machinery/circular-lohia-nova-looms.jpg" />
 
       {/* Infrastructure overview */}
       <section className="section">

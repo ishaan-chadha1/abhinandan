@@ -5,7 +5,7 @@ export const site = {
   shortName: "Abhinandan",
   tagline: "Three Decades of Manufacturing Excellence",
   description:
-    "Abhinandan Group is a diversified, manufacturing-led business group with a legacy spanning over three decades across industrial packaging, plastics, secondary aluminium, agri-solutions, outdoor furniture, farming and spirulina.",
+    "Established on a foundation of trust, quality and manufacturing excellence, Abhinandan Group has evolved into a diversified business enterprise with a legacy spanning nearly four decades. Driven by innovation and a commitment to continuous growth, we continue to expand our capabilities across industries while creating lasting value for our customers and partners.",
   // Placeholder domain — update when live.
   url: "https://abhinandangroup.com",
 };
@@ -22,7 +22,9 @@ export const nav: NavItem[] = [
     label: "About Us",
     href: "/about",
     children: [
-      { label: "About Overview", href: "/about" },
+      { label: "About Us", href: "/about" },
+      { label: "Our Management", href: "/about#management" },
+      { label: "Our Philosophy", href: "/about#philosophy" },
       { label: "Infrastructure & Machinery", href: "/infrastructure" },
     ],
   },
@@ -41,6 +43,5 @@ export const contact = {
     { name: "Yeshwant Bothra", phone: "+91 98458 44449", phoneHref: "+919845844449" },
   ],
   email: "abhinandanppl@gmail.com",
-  // Placeholder — replace with the official Alvara Spirulina website URL.
-  alvaraWebsite: "#",
+  alvaraWebsite: "https://www.alvaraspirulina.com/",
 };

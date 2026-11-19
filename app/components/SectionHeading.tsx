@@ -20,7 +20,7 @@ export default function SectionHeading({
     >
       {eyebrow && <p className="eyebrow mb-3">{eyebrow}</p>}
       <h2
-        className="text-3xl md:text-[2.5rem]"
+        className="text-3xl md:text-4xl"
         style={light ? { color: "#fff" } : undefined}
       >
         {title}

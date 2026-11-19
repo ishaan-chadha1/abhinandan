@@ -17,12 +17,7 @@ const mapEmbed = `https://www.google.com/maps?q=${encodeURIComponent(
 export default function ContactPage() {
   return (
     <>
-      <PageHero
-        eyebrow="Contact Us"
-        title="Let&rsquo;s Start a Conversation"
-        intro="Reach out to discuss your packaging, aluminium, agri-plastics or industrial requirements — our team is here to help."
-        image="/images/home/about-facility.jpg"
-      />
+      <PageHero title="Contact Us" image="/images/home/about-facility.jpg" />
 
       <section className="section">
         <div className="container-x grid gap-12 lg:grid-cols-2">

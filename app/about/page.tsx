@@ -17,52 +17,39 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      <PageHero
-        eyebrow="About Us"
-        title="Built on Trust. Driven by Innovation."
-        intro="A diversified, manufacturing-led business group with a legacy spanning over three decades."
-        image="/images/home/about-facility.jpg"
-      />
+      <PageHero title="About Us" image="/images/home/about-facility.jpg" />
 
       {/* Intro */}
       <section className="section">
         <div className="container-x grid items-center gap-12 lg:grid-cols-2">
-          <Reveal className="relative order-2 lg:order-1">
-            <div className="relative aspect-[4/3] overflow-hidden rounded-3xl" style={{ border: "6px solid #fff", boxShadow: "0 30px 60px -30px rgba(10,42,94,0.5)" }}>
-              <Image
-                src="/images/divisions/petro-pack.jpg"
-                alt="Abhinandan Group operations"
-                fill
-                sizes="(max-width: 1024px) 100vw, 560px"
-                className="object-cover"
-              />
-            </div>
+          <Reveal className="order-2 flex justify-center lg:order-1">
+            <Image
+              src="/images/brand/logo-orig.jpg"
+              alt="Abhinandan Group logo"
+              width={731}
+              height={760}
+              className="h-auto w-44 md:w-56"
+            />
           </Reveal>
           <div className="order-1 lg:order-2">
-            <Image
-              src="/images/brand/logo-full.png"
-              alt="Abhinandan Group logo"
-              width={110}
-              height={120}
-              className="mb-6 h-20 w-auto"
-            />
-            <SectionHeading eyebrow="Who We Are" title="Three Decades of Diversified Manufacturing" align="left" />
+            <SectionHeading eyebrow="Who We Are" title="A Legacy of Manufacturing Excellence" align="left" />
             <p className="lead mt-6">
-              Abhinandan Group is a diversified, manufacturing-led business group with a
-              legacy spanning over three decades. Built on the principles of quality,
-              integrity, innovation and customer trust, these values continue to shape
-              our operations and long-term partnerships.
+              Abhinandan Group is a diversified Indian business enterprise with a strong
+              foundation in industrial manufacturing. Built on decades of experience, the
+              Group has established its presence through a commitment to quality,
+              operational efficiency and enduring customer relationships.
             </p>
             <p className="mt-4 text-muted leading-relaxed">
               Under the leadership of Mr. Kamal Sipani, Mr. Yeshwant Bothra and Mr.
-              Abhishek Sipani, the Group has steadily expanded its manufacturing
-              capabilities, diversified its portfolio and strengthened its presence
-              across industries. Today, Abhinandan operates across industrial packaging,
-              plastics, secondary aluminium wire rods, agricultural solutions, outdoor
-              furniture, farming and spirulina cultivation. Combining extensive
-              manufacturing expertise with a forward-looking approach, the Group remains
-              committed to operational excellence, responsible growth and exploring new
-              opportunities in domestic and international markets.
+              Abhishek Sipani, the Group has steadily expanded its capabilities beyond
+              industrial packaging into plastics, secondary aluminium, agricultural
+              solutions, outdoor furniture, farming and spirulina cultivation.
+            </p>
+            <p className="mt-4 text-muted leading-relaxed">
+              With advanced manufacturing infrastructure, industry expertise and an
+              evolving business portfolio, Abhinandan Group continues to strengthen its
+              operations, explore new opportunities and deliver value to customers and
+              partners across industries.
             </p>
           </div>
         </div>
@@ -76,18 +63,24 @@ export default function AboutPage() {
         />
         <div className="absolute inset-0" style={{ background: "linear-gradient(120deg, rgba(10,42,94,0.95), rgba(18,78,158,0.82))" }} />
         <div className="container-x relative section">
-          <SectionHeading eyebrow="Empowering Growth for the Future" title="Built on Trust. Driven by Innovation." light />
-          <Reveal className="mx-auto mt-6 max-w-3xl text-center">
-            <p className="text-white/80 leading-relaxed">
-              At Abhinandan Group, growth is driven by a strong commitment to quality,
-              innovation and operational excellence. Backed by advanced manufacturing
-              infrastructure, modern technology and expertise across diverse industries,
-              we continuously strengthen our capabilities to meet evolving market demands.
-              Our focus extends beyond manufacturing to building lasting relationships,
-              embracing new opportunities and delivering consistent value to our
-              customers. Through efficient operations, strategic investments and a
-              forward-thinking approach, we remain committed to responsible growth and
-              long-term success.
+          <Reveal className="mx-auto max-w-3xl text-center">
+            <h2 className="text-4xl md:text-5xl" style={{ color: "#fff" }}>
+              Empowering Growth for the Future
+            </h2>
+            <span className="mx-auto mt-5 block h-[3px] w-16 rounded-full" style={{ background: "var(--blue-bright)" }} />
+            <p className="mt-5 text-lg font-semibold" style={{ color: "#bcd4ff", fontFamily: "var(--font-heading)" }}>
+              Strengthening Our Foundation. Expanding Our Horizons.
+            </p>
+            <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-white/70">
+              At Abhinandan Group, growth is built on the continuous advancement of our
+              capabilities, infrastructure and expertise. Through strategic investments,
+              modern manufacturing technologies and expansion into diverse sectors, we
+              remain focused on adapting to evolving industry requirements.
+            </p>
+            <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-white/70">
+              Our approach combines the strength of established operations with the
+              ambition to explore emerging opportunities, enabling us to build resilient
+              businesses and create sustainable, long-term value.
             </p>
           </Reveal>
           <div className="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -95,15 +88,22 @@ export default function AboutPage() {
               <Reveal
                 key={p.title}
                 delay={i * 90}
-                className="rounded-2xl p-7"
-                style={{ background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.14)" }}
+                className="group rounded-2xl p-7 transition-all duration-300 hover:-translate-y-1.5"
+                style={{ background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.18)" }}
               >
-                <span className="grid h-13 w-13 place-items-center rounded-xl text-white" style={{ background: "var(--blue-bright)", width: 52, height: 52 }}>
-                  <Icon name={p.icon} size={26} />
+                <span
+                  className="grid h-16 w-16 place-items-center rounded-2xl text-white transition-transform duration-300 group-hover:scale-110"
+                  style={{ background: "linear-gradient(145deg, var(--blue-bright), #4f8ef7)", boxShadow: "0 14px 26px -12px rgba(0,0,0,0.55)" }}
+                >
+                  <Icon name={p.icon} size={30} />
                 </span>
                 <h3 className="mt-5 text-lg" style={{ color: "#fff" }}>
                   {p.title}
                 </h3>
+                {p.body && (
+                  <p className="mt-3 text-sm leading-relaxed text-white/70">{p.body}</p>
+                )}
+                <span className="mt-4 block h-1 w-8 rounded-full transition-all duration-300 group-hover:w-16" style={{ background: "var(--blue-bright)" }} />
               </Reveal>
             ))}
           </div>
@@ -114,12 +114,15 @@ export default function AboutPage() {
       <OurJourney />
 
       {/* Management */}
-      <section className="section">
+      <section id="management" className="section scroll-mt-24">
         <div className="container-x">
-          <SectionHeading
-            eyebrow="Our Management"
-            title="Guided by Visionary Leadership"
-          />
+          <Reveal className="mx-auto max-w-2xl text-center">
+            <h2 className="text-4xl md:text-6xl">Our Management</h2>
+            <span className="mx-auto mt-5 block h-[3px] w-16 rounded-full" style={{ background: "var(--blue-bright)" }} />
+            <p className="mt-4 text-base font-medium text-muted md:text-lg" style={{ fontFamily: "var(--font-heading)" }}>
+              Guided by Visionary Leadership
+            </p>
+          </Reveal>
           <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {leaders.map((l, i) => (
               <Reveal key={l.name} delay={i * 110} className="group">
@@ -193,7 +196,7 @@ export default function AboutPage() {
       </section>
 
       {/* Philosophy + What Defines Us */}
-      <section className="section">
+      <section id="philosophy" className="section scroll-mt-24" style={{ background: "linear-gradient(165deg, var(--sky) 0%, #dceafb 55%, #cfe0f7 100%)" }}>
         <div className="container-x">
           <SectionHeading
             eyebrow="Our Philosophy"
@@ -222,14 +225,16 @@ export default function AboutPage() {
           <div className="mx-auto max-w-3xl text-center">
             <Reveal>
               <p className="eyebrow" style={{ color: "#bcd4ff" }}>Beyond Business</p>
-              <h2 className="mt-3 text-3xl md:text-4xl" style={{ color: "#fff" }}>Creating Value That Lasts</h2>
+              <h2 className="mt-3 text-3xl md:text-4xl" style={{ color: "#fff" }}>Building Value Beyond Business</h2>
               <p className="mt-5 text-white/80 leading-relaxed">
-                Our commitment extends beyond manufacturing and commercial success. We
-                believe in empowering our people, strengthening industry partnerships,
-                contributing to the communities around us and building businesses that
-                create lasting value. As Abhinandan Group enters new sectors, our
-                philosophy remains unchanged: to grow with purpose, operate with
-                integrity and build for the future.
+                At Abhinandan Group, our vision extends beyond manufacturing and
+                commercial growth. We recognise the importance of our people, partnerships
+                and the communities connected to our businesses.
+              </p>
+              <p className="mt-4 text-white/80 leading-relaxed">
+                As we expand into new industries, we remain focused on responsible
+                operations, continuous improvement and creating opportunities that
+                contribute to lasting progress.
               </p>
             </Reveal>
           </div>

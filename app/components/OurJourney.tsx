@@ -174,11 +174,11 @@ const ARTBOARD_HTML = `
       <span class="leaders-rule"></span>
     </div>
     <div class="logos-row">
-      <img class="tl-logo" src="/images/clients/dalmia-trans.png" alt="Dalmia Cement" />
-      <img class="tl-logo" src="/images/clients/ramco-trans.png" alt="Ramco Cements" />
-      <img class="tl-logo" src="/images/clients/acc.png" alt="ACC Cement" />
-      <img class="tl-logo" src="/images/clients/ultratech.png" alt="UltraTech Cement" />
-      <img class="tl-logo" src="/images/clients/cci.png" alt="CCI Cement" />
+      <img class="tl-logo" src="/images/clients/hindustan-unilever-trans.png" alt="Hindustan Unilever Limited" />
+      <img class="tl-logo" src="/images/clients/jindal-aluminium-trans.png" alt="Jindal Aluminium" />
+      <img class="tl-logo tl-logo-sm" src="/images/clients/chemplast-trans.png" alt="Chemplast Sanmar" />
+      <img class="tl-logo tl-logo-lg" src="/images/clients/dalmia-trans.png" alt="Dalmia Bharat Cement" />
+      <img class="tl-logo tl-logo-lg" src="/images/clients/ramco-trans.png" alt="Ramco Cements" />
     </div>
     <p class="leaders-subtitle">Serving leading sugar refineries across India</p>
   </section>

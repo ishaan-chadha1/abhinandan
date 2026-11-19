@@ -23,21 +23,31 @@ export default function Home() {
               <Reveal
                 key={h.title}
                 delay={i * 80}
-                className="flex flex-col items-center rounded-2xl bg-white p-6 text-center"
-                style={{ border: "1px solid var(--line)" }}
+                className="group relative flex flex-col items-center overflow-hidden rounded-2xl bg-white px-5 pb-7 pt-8 text-center transition-all duration-300 hover:-translate-y-1.5"
+                style={{ border: "1px solid var(--line)", boxShadow: "0 18px 40px -30px rgba(10,42,94,0.5)" }}
               >
                 <span
-                  className="grid h-14 w-14 place-items-center rounded-xl text-white"
-                  style={{ background: "linear-gradient(145deg, var(--blue-bright), var(--navy))" }}
+                  className="absolute right-3 top-1 text-6xl font-extrabold leading-none"
+                  style={{ fontFamily: "var(--font-heading)", color: "var(--sky)" }}
                 >
-                  <Icon name={h.icon} size={26} />
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <span
+                  className="relative grid h-16 w-16 place-items-center rounded-2xl text-white transition-transform duration-300 group-hover:scale-110"
+                  style={{ background: "linear-gradient(145deg, var(--blue-bright), var(--navy))", boxShadow: "0 12px 24px -12px rgba(18,78,158,0.8)" }}
+                >
+                  <Icon name={h.icon} size={30} />
                 </span>
                 <p
-                  className="mt-4 text-sm font-semibold leading-snug text-navy"
+                  className="relative mt-5 text-[0.95rem] font-bold leading-snug text-navy"
                   style={{ fontFamily: "var(--font-heading)" }}
                 >
                   {h.title}
                 </p>
+                <span
+                  className="mt-4 block h-1 w-8 rounded-full transition-all duration-300 group-hover:w-14"
+                  style={{ background: "var(--blue-bright)" }}
+                />
               </Reveal>
             ))}
           </div>
@@ -56,17 +66,6 @@ export default function Home() {
                 sizes="(max-width: 1024px) 100vw, 680px"
                 className="object-cover"
               />
-            </div>
-            <div
-              className="absolute -bottom-6 -right-4 hidden rounded-2xl px-8 py-6 text-white shadow-xl sm:block"
-              style={{ background: "var(--blue)" }}
-            >
-              <p className="text-4xl" style={{ fontFamily: "var(--font-heading)", fontWeight: 800 }}>
-                1,20,000
-              </p>
-              <p className="text-xs uppercase tracking-wider text-white/80">
-                sq. ft. built-up
-              </p>
             </div>
           </Reveal>
 
@@ -101,7 +100,6 @@ export default function Home() {
           <SectionHeading
             eyebrow="Our Divisions"
             title="Diversified Businesses. One Strong Foundation."
-            intro="Seven divisions spanning packaging, plastics, aluminium, agri-solutions, outdoor furniture, farming and spirulina."
           />
           <div className="mt-12">
             <CardCarousel
@@ -130,15 +128,13 @@ export default function Home() {
           <SectionHeading
             eyebrow="Our Products"
             title="Engineered for Performance"
-            intro="A versatile product range built to meet demanding industrial and agricultural requirements."
           />
           <div className="mt-12">
             <CardCarousel
               items={products.map((p) => ({
                 image: p.image,
                 title: p.name,
-                href: "/products",
-                fit: p.fill ? "cover" : "contain",
+                fit: "contain",
               }))}
             />
           </div>
@@ -176,7 +172,6 @@ export default function Home() {
           <SectionHeading
             eyebrow="Our Clients"
             title="Trusted by Industry Leaders"
-            intro="Partnering with leading FMCG, cement and industrial brands across India and beyond."
           />
         </div>
         <div className="mt-12">
