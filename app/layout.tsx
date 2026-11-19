@@ -3,6 +3,7 @@ import { Inter, Barlow } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import EnquiryModal from "./components/EnquiryModal";
 import { site } from "@/lib/site";
 
 const inter = Inter({
@@ -39,6 +40,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
+        <EnquiryModal />
       </body>
     </html>
   );

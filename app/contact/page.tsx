@@ -78,7 +78,7 @@ export default function ContactPage() {
 
           {/* Form */}
           <Reveal className="rounded-3xl bg-white p-7 md:p-9" style={{ border: "1px solid var(--line)", boxShadow: "0 30px 60px -40px rgba(10,42,94,0.5)" }}>
-            <h2 className="text-2xl">Send us an enquiry</h2>
+            <h2 className="text-2xl">Inquiry Form</h2>
             <p className="mt-2 text-sm text-muted">Fill in the form and we&rsquo;ll get back to you shortly.</p>
             <div className="mt-6">
               <ContactForm />

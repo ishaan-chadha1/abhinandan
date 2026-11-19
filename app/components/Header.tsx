@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import Logo from "./Logo";
+import { openEnquiry } from "./EnquiryModal";
 import { nav, contact } from "@/lib/site";
 
 export default function Header() {
@@ -39,9 +40,9 @@ export default function Header() {
           </div>
           <div className="flex items-center gap-5">
             <span className="text-white/60">Jigani, Bengaluru</span>
-            <Link href="/contact" className="font-medium text-white hover:text-sky">
+            <button type="button" onClick={openEnquiry} className="font-medium text-white hover:text-sky">
               Enquire&nbsp;&rarr;
-            </Link>
+            </button>
           </div>
         </div>
       </div>
@@ -65,7 +66,7 @@ export default function Header() {
                 <div key={item.href} className="group relative">
                   <Link
                     href={item.href}
-                    className="relative flex items-center gap-1 px-3.5 py-2 text-[0.93rem] font-medium transition-colors"
+                    className="relative flex items-center gap-1 px-3.5 py-2 text-[0.93rem] font-bold transition-colors"
                     style={{
                       fontFamily: "var(--font-heading)",
                       color: isActive(item.href) ? "var(--blue)" : "var(--ink)",
@@ -109,7 +110,7 @@ export default function Header() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="relative px-3.5 py-2 text-[0.93rem] font-medium transition-colors"
+                  className="relative px-3.5 py-2 text-[0.93rem] font-bold transition-colors"
                   style={{
                     fontFamily: "var(--font-heading)",
                     color: isActive(item.href) ? "var(--blue)" : "var(--ink)",
@@ -130,9 +131,9 @@ export default function Header() {
           </nav>
 
           <div className="flex items-center gap-3">
-            <Link href="/contact" className="btn btn-primary hidden sm:inline-flex">
+            <button type="button" onClick={openEnquiry} className="btn btn-primary hidden sm:inline-flex">
               Get in Touch
-            </Link>
+            </button>
             {/* Mobile toggle */}
             <button
               type="button"
@@ -190,9 +191,9 @@ export default function Header() {
                   )}
                 </div>
               ))}
-              <Link href="/contact" className="btn btn-primary mt-3 w-full justify-center">
+              <button type="button" onClick={openEnquiry} className="btn btn-primary mt-3 w-full justify-center">
                 Get in Touch
-              </Link>
+              </button>
             </nav>
           </div>
         )}

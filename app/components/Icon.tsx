@@ -59,6 +59,27 @@ const paths: Record<IconKey, React.ReactNode> = {
       <path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9 17 7M7 17l-2.1 2.1" />
     </>
   ),
+  layers: (
+    <>
+      <path d="m12 3 9 5-9 5-9-5 9-5Z" />
+      <path d="m3 13 9 5 9-5" />
+      <path d="m3 17 9 5 9-5" />
+    </>
+  ),
+  trending: (
+    <>
+      <path d="M4 20V4M4 20h16" />
+      <path d="m8 15 3-4 3 2.5L20 7" />
+      <path d="M20 11V7h-4" />
+    </>
+  ),
+  bulb: (
+    <>
+      <path d="M9 18h6" />
+      <path d="M10 21h4" />
+      <path d="M12 3a6 6 0 0 0-4 10.5c.7.7 1 1.3 1 2.5h6c0-1.2.3-1.8 1-2.5A6 6 0 0 0 12 3Z" />
+    </>
+  ),
 };
 
 export default function Icon({

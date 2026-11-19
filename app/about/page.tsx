@@ -24,11 +24,12 @@ export default function AboutPage() {
         <div className="container-x grid items-center gap-12 lg:grid-cols-2">
           <Reveal className="order-2 flex justify-center lg:order-1">
             <Image
-              src="/images/brand/logo-orig.jpg"
+              src="/images/brand/logo-mark-hd.png"
               alt="Abhinandan Group logo"
-              width={731}
-              height={760}
-              className="h-auto w-44 md:w-56"
+              width={827}
+              height={888}
+              priority
+              className="block h-auto w-64 md:w-72 lg:w-[20rem]"
             />
           </Reveal>
           <div className="order-1 lg:order-2">
@@ -55,57 +56,59 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Empowering Growth — bleed background + 4 pillars */}
-      <section className="relative overflow-hidden" style={{ background: "var(--navy)" }}>
-        <div
-          className="absolute inset-0 opacity-15"
-          style={{ backgroundImage: "url(/images/machinery/circular-lohia-nova-looms.jpg)", backgroundSize: "cover", backgroundPosition: "center" }}
-        />
-        <div className="absolute inset-0" style={{ background: "linear-gradient(120deg, rgba(10,42,94,0.95), rgba(18,78,158,0.82))" }} />
-        <div className="container-x relative section">
-          <Reveal className="mx-auto max-w-3xl text-center">
-            <h2 className="text-4xl md:text-5xl" style={{ color: "#fff" }}>
+      {/* Empowering Growth — image + 2×2 pillars */}
+      <section className="section" style={{ background: "linear-gradient(180deg, #e4eefb 0%, #cfe0f7 100%)" }}>
+        <div className="container-x grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+          <Reveal className="relative">
+            <div
+              className="relative aspect-[16/11] w-full overflow-hidden rounded-3xl"
+              style={{ boxShadow: "0 40px 70px -40px rgba(10,42,94,0.5)" }}
+            >
+              <Image
+                src="/images/hero/empowering-growth.png"
+                alt="Abhinandan Group manufacturing lines"
+                fill
+                sizes="(max-width: 1024px) 100vw, 580px"
+                className="object-cover"
+              />
+            </div>
+          </Reveal>
+
+          <div>
+            <p className="eyebrow" style={{ fontSize: "0.82rem" }}>About Abhinandan Group</p>
+            <h2 className="mt-3 text-3xl md:text-[2.6rem] md:leading-[1.08]">
               Empowering Growth for the Future
             </h2>
-            <span className="mx-auto mt-5 block h-[3px] w-16 rounded-full" style={{ background: "var(--blue-bright)" }} />
-            <p className="mt-5 text-lg font-semibold" style={{ color: "#bcd4ff", fontFamily: "var(--font-heading)" }}>
-              Strengthening Our Foundation. Expanding Our Horizons.
+            <p className="lead mt-5">
+              Our growth is built on the continuous advancement of our capabilities,
+              infrastructure and expertise. Through strategic investments, modern
+              manufacturing technologies and expansion into diverse sectors, we remain
+              focused on creating sustainable, long-term value.
             </p>
-            <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-white/70">
-              At Abhinandan Group, growth is built on the continuous advancement of our
-              capabilities, infrastructure and expertise. Through strategic investments,
-              modern manufacturing technologies and expansion into diverse sectors, we
-              remain focused on adapting to evolving industry requirements.
-            </p>
-            <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-white/70">
-              Our approach combines the strength of established operations with the
-              ambition to explore emerging opportunities, enabling us to build resilient
-              businesses and create sustainable, long-term value.
-            </p>
-          </Reveal>
-          <div className="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {pillars.map((p, i) => (
-              <Reveal
-                key={p.title}
-                delay={i * 90}
-                className="group rounded-2xl p-7 transition-all duration-300 hover:-translate-y-1.5"
-                style={{ background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.18)" }}
-              >
-                <span
-                  className="grid h-16 w-16 place-items-center rounded-2xl text-white transition-transform duration-300 group-hover:scale-110"
-                  style={{ background: "linear-gradient(145deg, var(--blue-bright), #4f8ef7)", boxShadow: "0 14px 26px -12px rgba(0,0,0,0.55)" }}
-                >
-                  <Icon name={p.icon} size={30} />
-                </span>
-                <h3 className="mt-5 text-lg" style={{ color: "#fff" }}>
-                  {p.title}
-                </h3>
-                {p.body && (
-                  <p className="mt-3 text-sm leading-relaxed text-white/70">{p.body}</p>
-                )}
-                <span className="mt-4 block h-1 w-8 rounded-full transition-all duration-300 group-hover:w-16" style={{ background: "var(--blue-bright)" }} />
-              </Reveal>
-            ))}
+
+            <div className="mt-9 grid gap-x-8 gap-y-8 sm:grid-cols-2">
+              {pillars.map((p, i) => (
+                <Reveal key={p.title} delay={i * 90} className="flex gap-4">
+                  <span
+                    className="grid h-12 w-12 shrink-0 place-items-center rounded-xl transition-transform duration-300"
+                    style={{
+                      background: "radial-gradient(circle at 32% 28%, #14346e 0%, #0a2a5e 70%)",
+                      border: "1px solid rgba(198,154,75,0.45)",
+                      boxShadow: "0 10px 22px -12px rgba(10,42,94,0.8)",
+                      color: "#e7c680",
+                    }}
+                  >
+                    <Icon name={p.icon} size={24} />
+                  </span>
+                  <div>
+                    <h3 className="text-base leading-snug">{p.title}</h3>
+                    {p.body && (
+                      <p className="mt-1.5 text-sm leading-relaxed text-muted">{p.body}</p>
+                    )}
+                  </div>
+                </Reveal>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -164,7 +167,7 @@ export default function AboutPage() {
       </section>
 
       {/* Infrastructure teaser */}
-      <section className="section" style={{ background: "var(--sky-2)" }}>
+      <section className="section" style={{ background: "linear-gradient(180deg, #dbe8fa 0%, #d1e1f7 100%)" }}>
         <div className="container-x">
           <Reveal
             className="grid items-center gap-0 overflow-hidden rounded-3xl bg-white lg:grid-cols-2"

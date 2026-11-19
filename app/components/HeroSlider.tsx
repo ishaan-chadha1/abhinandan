@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
+import { openEnquiry } from "./EnquiryModal";
 import { heroSlides } from "@/lib/content";
 
 export default function HeroSlider() {
@@ -59,9 +60,6 @@ export default function HeroSlider() {
       <div className="relative z-10 flex h-full items-center">
         <div className="container-x">
           <div className="max-w-2xl text-white">
-            <p className="eyebrow" style={{ color: "#bcd4ff" }}>
-              Abhinandan Group
-            </p>
             {heroSlides.map((slide, i) => (
               <div
                 key={slide.title}
@@ -70,7 +68,7 @@ export default function HeroSlider() {
                   display: i === index ? "block" : "none",
                 }}
               >
-                <h1 className="mt-4 text-4xl md:text-6xl" style={{ color: "#fff" }}>
+                <h1 className="text-4xl md:text-6xl" style={{ color: "#fff" }}>
                   {slide.title}
                 </h1>
                 <p className="mt-6 max-w-xl text-base leading-relaxed text-white/85 md:text-lg">
@@ -82,9 +80,9 @@ export default function HeroSlider() {
               <Link href="/divisions" className="btn btn-primary">
                 Explore Our Divisions
               </Link>
-              <Link href="/contact" className="btn btn-ghost">
+              <button type="button" onClick={openEnquiry} className="btn btn-ghost">
                 Get in Touch
-              </Link>
+              </button>
             </div>
           </div>
         </div>

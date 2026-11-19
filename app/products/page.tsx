@@ -39,6 +39,10 @@ export default function ProductsPage() {
                   <h3 className="text-lg text-navy" style={{ fontFamily: "var(--font-heading)", fontWeight: 700 }}>
                     {p.name}
                   </h3>
+                  <span
+                    className="mx-auto mt-2.5 block h-[3px] w-12 rounded-full transition-all duration-300 group-hover:w-16"
+                    style={{ background: "linear-gradient(90deg, var(--blue), var(--blue-bright))" }}
+                  />
                   {p.desc && (
                     <p className="mt-3 text-sm leading-relaxed text-muted">{p.desc}</p>
                   )}

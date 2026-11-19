@@ -63,7 +63,7 @@ export default function QualityPage() {
       </section>
 
       {/* Certificates */}
-      <section className="section" style={{ background: "var(--sky-2)" }}>
+      <section className="section" style={{ background: "linear-gradient(180deg, #e4eefb 0%, #cfe0f7 100%)" }}>
         <div className="container-x">
           <SectionHeading
             eyebrow="Certifications"

@@ -16,38 +16,84 @@ export default function Home() {
       <HeroSlider />
 
       {/* Highlights — the 5 points */}
-      <section className="section" style={{ background: "var(--sky-2)" }}>
+      <section className="section" style={{ background: "linear-gradient(180deg, #d4e3f7 0%, #e4eefb 100%)" }}>
         <div className="container-x">
-          <div className="grid grid-cols-2 gap-5 md:grid-cols-5">
+          <div className="mx-auto mb-12 flex max-w-md items-center justify-center gap-4">
+            <span className="h-px flex-1" style={{ background: "linear-gradient(90deg, transparent, var(--line))" }} />
+            <span className="eyebrow whitespace-nowrap" style={{ fontSize: "0.82rem", color: "var(--blue)" }}>
+              The Abhinandan Group Advantage
+            </span>
+            <span className="h-px flex-1" style={{ background: "linear-gradient(90deg, var(--line), transparent)" }} />
+          </div>
+          <div className="grid grid-cols-2 gap-4 md:grid-cols-5 md:gap-5">
             {highlights.map((h, i) => (
               <Reveal
-                key={h.title}
+                key={h.primary}
                 delay={i * 80}
-                className="group relative flex flex-col items-center overflow-hidden rounded-2xl bg-white px-5 pb-7 pt-8 text-center transition-all duration-300 hover:-translate-y-1.5"
-                style={{ border: "1px solid var(--line)", boxShadow: "0 18px 40px -30px rgba(10,42,94,0.5)" }}
+                className="group relative flex min-h-[270px] flex-col items-center overflow-hidden rounded-[18px] px-5 pb-8 pt-8 text-center transition-all duration-300 hover:-translate-y-1.5"
+                style={{
+                  background: "linear-gradient(180deg, #ffffff 0%, #f7f9fd 100%)",
+                  border: "1px solid var(--line)",
+                  boxShadow: "0 24px 50px -32px rgba(10,42,94,0.55)",
+                }}
               >
+                {/* Faded industrial image at the bottom — soft-edged, no hard rectangle */}
                 <span
-                  className="absolute right-3 top-1 text-6xl font-extrabold leading-none"
-                  style={{ fontFamily: "var(--font-heading)", color: "var(--sky)" }}
-                >
-                  {String(i + 1).padStart(2, "0")}
-                </span>
+                  aria-hidden
+                  className="pointer-events-none absolute inset-x-0 bottom-0 h-[55%]"
+                  style={{
+                    backgroundImage: `url(${h.bg})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    opacity: 0.18,
+                    filter: "grayscale(0.25) saturate(0.7)",
+                    WebkitMaskImage: "radial-gradient(130% 115% at 50% 100%, #000 32%, transparent 82%)",
+                    maskImage: "radial-gradient(130% 115% at 50% 100%, #000 32%, transparent 82%)",
+                  }}
+                />
+                {/* Gold folded corner (top-right) */}
                 <span
-                  className="relative grid h-16 w-16 place-items-center rounded-2xl text-white transition-transform duration-300 group-hover:scale-110"
-                  style={{ background: "linear-gradient(145deg, var(--blue-bright), var(--navy))", boxShadow: "0 12px 24px -12px rgba(18,78,158,0.8)" }}
+                  aria-hidden
+                  className="absolute right-0 top-0 h-0 w-0"
+                  style={{
+                    borderTop: "46px solid #d9b265",
+                    borderLeft: "46px solid transparent",
+                    borderTopRightRadius: "18px",
+                  }}
+                />
+                <span
+                  aria-hidden
+                  className="absolute right-0 top-0 h-0 w-0"
+                  style={{ borderTop: "46px solid rgba(255,255,255,0.25)", borderLeft: "46px solid transparent" }}
+                />
+
+                <span
+                  className="relative z-10 grid h-16 w-16 place-items-center rounded-2xl text-white transition-transform duration-300 group-hover:scale-110"
+                  style={{
+                    background: "linear-gradient(150deg, #2a66c4 0%, #0f3f86 55%, #0a2a5e 100%)",
+                    boxShadow: "0 14px 28px -12px rgba(10,42,94,0.9), inset 0 1px 0 rgba(255,255,255,0.22)",
+                  }}
                 >
                   <Icon name={h.icon} size={30} />
                 </span>
-                <p
-                  className="relative mt-5 text-[0.95rem] font-bold leading-snug text-navy"
-                  style={{ fontFamily: "var(--font-heading)" }}
-                >
-                  {h.title}
-                </p>
-                <span
-                  className="mt-4 block h-1 w-8 rounded-full transition-all duration-300 group-hover:w-14"
-                  style={{ background: "var(--blue-bright)" }}
-                />
+
+                <div className="relative z-10 mt-6 flex flex-1 flex-col items-center">
+                  <p
+                    className="text-[1.45rem] font-extrabold leading-[1.1] text-navy md:text-[1.6rem]"
+                    style={{ fontFamily: "var(--font-heading)" }}
+                  >
+                    {h.primary}
+                  </p>
+                  {h.sub && (
+                    <p className="mt-1.5 text-[0.9rem] font-medium leading-snug text-muted">
+                      {h.sub}
+                    </p>
+                  )}
+                  <span
+                    className="mt-4 block h-[3px] w-10 rounded-full transition-all duration-300 group-hover:w-16"
+                    style={{ background: "linear-gradient(90deg, #c69a4b, #e7c680)" }}
+                  />
+                </div>
               </Reveal>
             ))}
           </div>
@@ -123,7 +169,7 @@ export default function Home() {
       />
 
       {/* Products carousel */}
-      <section className="section">
+      <section className="section" style={{ background: "linear-gradient(180deg, #e4eefb 0%, #cfe0f7 100%)" }}>
         <div className="container-x">
           <SectionHeading
             eyebrow="Our Products"
@@ -167,7 +213,7 @@ export default function Home() {
       </section>
 
       {/* Clients */}
-      <section className="section">
+      <section className="section" style={{ background: "linear-gradient(180deg, #dbe8fa 0%, #d1e1f7 100%)" }}>
         <div className="container-x">
           <SectionHeading
             eyebrow="Our Clients"

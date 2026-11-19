@@ -34,14 +34,14 @@ export const heroSlides: HeroSlide[] = [
   },
 ];
 
-export type Highlight = { icon: IconKey; title: string };
+export type Highlight = { icon: IconKey; primary: string; sub?: string; bg: string };
 
 export const highlights: Highlight[] = [
-  { icon: "award", title: "30+ Years of Excellence" },
-  { icon: "factory", title: "High-Capacity Manufacturing" },
-  { icon: "grid", title: "Diversified Businesses" },
-  { icon: "spark", title: "Quality & Innovation" },
-  { icon: "handshake", title: "Trusted Partnerships" },
+  { icon: "award", primary: "30+", sub: "Years of Excellence", bg: "/images/divisions/petro-pack.jpg" },
+  { icon: "factory", primary: "7,000 MT+", sub: "High-Capacity Manufacturing", bg: "/images/divisions/aluminium.jpg" },
+  { icon: "layers", primary: "Diversified", sub: "Businesses", bg: "/images/divisions/plastics.jpg" },
+  { icon: "bulb", primary: "Quality & Innovation", bg: "/images/machinery/lohia-valvomatic-40.jpg" },
+  { icon: "handshake", primary: "Trusted Partnerships", bg: "/images/divisions/outdoor-space-studio.jpg" },
 ];
 
 export type Stat = { value: number; suffix: string; label: string };
@@ -269,10 +269,10 @@ export type Value = { icon: IconKey; title: string; body?: string };
 
 // "Empowering Growth For The Future" — four pillars.
 export const pillars: Value[] = [
-  { icon: "compass", title: "Experienced Leadership", body: "Guided by decades of industry knowledge and strategic direction." },
-  { icon: "factory", title: "Integrated Manufacturing Capabilities", body: "Strengthening efficiency and consistency through infrastructure and technology." },
+  { icon: "award", title: "Experienced Leadership", body: "Guided by decades of industry knowledge and strategic direction." },
+  { icon: "layers", title: "Integrated Manufacturing Capabilities", body: "Strengthening efficiency and consistency through infrastructure and technology." },
   { icon: "shield", title: "Commitment to Quality", body: "Maintaining high standards across products, processes and operations." },
-  { icon: "spark", title: "Diversification & Growth", body: "Expanding into new sectors while building on established industry expertise." },
+  { icon: "trending", title: "Diversification & Growth", body: "Expanding into new sectors while building on established industry expertise." },
 ];
 
 export type Principle = { no: string; title: string; body: string };
@@ -381,4 +381,7 @@ export type IconKey =
   | "compass"
   | "shield"
   | "leaf"
-  | "cog";
+  | "cog"
+  | "layers"
+  | "trending"
+  | "bulb";
