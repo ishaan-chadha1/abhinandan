@@ -18,12 +18,10 @@ export default function Home() {
       {/* Highlights — the 5 points */}
       <section className="section" style={{ background: "linear-gradient(180deg, #d4e3f7 0%, #e4eefb 100%)" }}>
         <div className="container-x">
-          <div className="mx-auto mb-12 flex max-w-md items-center justify-center gap-4">
-            <span className="h-px flex-1" style={{ background: "linear-gradient(90deg, transparent, var(--line))" }} />
-            <span className="eyebrow whitespace-nowrap" style={{ fontSize: "0.82rem", color: "var(--blue)" }}>
-              The Abhinandan Group Advantage
-            </span>
-            <span className="h-px flex-1" style={{ background: "linear-gradient(90deg, var(--line), transparent)" }} />
+          <div className="mx-auto mb-12 flex items-center justify-center gap-5">
+            <span className="h-[3px] w-12 rounded-full md:w-16" style={{ background: "linear-gradient(90deg, transparent, #c69a4b)" }} />
+            <h2 className="whitespace-nowrap text-3xl md:text-[2.4rem]">What Defines Us</h2>
+            <span className="h-[3px] w-12 rounded-full md:w-16" style={{ background: "linear-gradient(90deg, #c69a4b, transparent)" }} />
           </div>
           <div className="grid grid-cols-2 gap-4 md:grid-cols-5 md:gap-5">
             {highlights.map((h, i) => (

@@ -21,9 +21,9 @@ const certificates = [
 ];
 
 const commitments = [
-  { icon: "shield", title: "Stringent Quality Control", body: "Every production stage is monitored to maintain consistency, precision and reliability across our products." },
-  { icon: "cog", title: "Process Excellence", body: "Integrated production systems and modern machinery ensure repeatable, high-standard output at scale." },
-  { icon: "spark", title: "Continuous Improvement", body: "We invest in technology and process optimisation to continually raise our manufacturing standards." },
+  { icon: "award", title: "Stringent Quality Control", body: "Every production stage is monitored to maintain consistency, precision and reliability across our products." },
+  { icon: "factory", title: "Process Excellence", body: "Integrated production systems and modern machinery ensure repeatable, high-standard output at scale." },
+  { icon: "trending", title: "Continuous Improvement", body: "We invest in technology and process optimisation to continually raise our manufacturing standards." },
 ];
 
 export default function QualityPage() {

@@ -57,18 +57,23 @@ export default function DivisionsPage() {
                     </p>
                   ))}
                 </div>
-                {d.link && (
-                  <a
-                    href={d.link.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`btn mt-7 ${blue ? "btn-ghost" : "btn-outline"}`}
-                  >
-                    {d.link.label}
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M7 17 17 7M8 7h9v9" />
-                    </svg>
-                  </a>
+                {d.links && d.links.length > 0 && (
+                  <div className="mt-7 flex flex-wrap gap-3">
+                    {d.links.map((l) => (
+                      <a
+                        key={l.href}
+                        href={l.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`btn ${blue ? "btn-ghost" : "btn-outline"}`}
+                      >
+                        {l.label}
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M7 17 17 7M8 7h9v9" />
+                        </svg>
+                      </a>
+                    ))}
+                  </div>
                 )}
               </Reveal>
             </div>

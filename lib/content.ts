@@ -58,7 +58,7 @@ export type Division = {
   image: string;
   summary: string; // short, for carousel / cards
   body: string[]; // full paragraphs, for divisions page
-  link?: { label: string; href: string };
+  links?: { label: string; href: string }[];
 };
 
 export const divisions: Division[] = [
@@ -108,6 +108,9 @@ export const divisions: Division[] = [
       "Its portfolio includes HDPE geomembrane liners, mulching films, greenhouse films, shade nets, insect nets and greenhouse accessories designed to support efficient cultivation and water conservation.",
       "With a focus on product durability, quality and practical applications, Greenplast provides reliable solutions for agricultural, industrial and water-management requirements, contributing to improved resource efficiency and sustainable practices.",
     ],
+    links: [
+      { label: "Follow on Instagram", href: "https://www.instagram.com/thegreenplast" },
+    ],
   },
   {
     slug: "outdoor-space-studio",
@@ -120,10 +123,10 @@ export const divisions: Division[] = [
       "With an emphasis on quality craftsmanship, weather-resistant materials and thoughtful design, the brand offers furniture suited to residential, hospitality and commercial spaces.",
       "By bringing together aesthetics, comfort and long-lasting performance, Outer Space Studio creates outdoor furnishings designed to enhance modern living environments.",
     ],
-    link: {
-      label: "Follow on Instagram",
-      href: "https://www.instagram.com/outerspacepatio?xtok=MW91ZWh3M2pyMXN5Mw==",
-    },
+    links: [
+      { label: "Visit Website", href: "https://www.outerspace.in/" },
+      { label: "Follow on Instagram", href: "https://www.instagram.com/outerspacepatio" },
+    ],
   },
   {
     slug: "abhinandan-farms",
@@ -135,10 +138,9 @@ export const divisions: Division[] = [
       "Established in 2024, Abhinandan Farms marks the Group's strategic entry into agriculture and protected cultivation, expanding its portfolio into sustainable and future-focused food production. The venture is centred on the high-quality cultivation and processing of fruits and vegetables, driven by environmentally responsible and health-conscious agricultural practices.",
       "Currently, Abhinandan Farms cultivates a diverse range of crops, including Japanese guava, bell peppers (red, yellow and green capsicum), pomegranates, supari (areca nut), bamboo and coconut, ensuring crop diversity and long-term sustainability.",
     ],
-    link: {
-      label: "Follow on Instagram",
-      href: "https://www.instagram.com/abhinandan_farms?cplk=ZnNxOWZsNXpweXhr",
-    },
+    links: [
+      { label: "Follow on Instagram", href: "https://www.instagram.com/abhinandan_farms" },
+    ],
   },
   {
     slug: "alvara-spirulina",
@@ -151,10 +153,9 @@ export const divisions: Division[] = [
       "The operation integrates controlled cultivation, harvesting, low-temperature drying, processing and quality testing to produce nutrient-rich spirulina powder for domestic and international markets.",
       "With a focus on sustainable production, advanced cultivation techniques and stringent quality standards, Alvara Spirulina caters to the growing demand from the nutraceutical, functional food, health supplement and wellness industries.",
     ],
-    link: {
-      label: "Visit Website",
-      href: "https://www.alvaraspirulina.com/",
-    },
+    links: [
+      { label: "Visit Website", href: "https://www.alvaraspirulina.com/" },
+    ],
   },
 ];
 
@@ -175,8 +176,7 @@ export const products: Product[] = [
   },
   {
     name: "HDPE / PP Woven Sacks",
-    image: "/images/products/hdpe-pp-woven-sacks-framed-v5.jpg",
-    fill: true,
+    image: "/images/products/hdpe-pp-woven-sacks-framed-v5-removebg-preview.png",
     desc: "Durable and versatile woven sacks manufactured using high-density polyethylene (HDPE) and polypropylene (PP). Engineered for strength and dependable performance, they are suitable for packaging cement, fertilisers, agricultural commodities and a wide range of industrial materials.",
   },
   {
